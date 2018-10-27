@@ -56,114 +56,59 @@ $(document).ready(function(){
         console.log(charData);
        
         if (seekerScore >= 48 && seekerScore <= 50) {
-          let charGroup = 0;
-          let groupArraySize = charData[charGroup].length;
-          let char = Math.floor((Math.random() * groupArraySize) + 0);
-          console.log(charData[charGroup][char].charName);
-          console.log(charData[charGroup][char].charphoto);
-          console.log(charData[charGroup][char].shortName); 
+          displayAlterEgoInfo(0, charData); 
         }
         else if (seekerScore >= 43 && seekerScore <= 47) {
-          let charGroup = 1;
-          let groupArraySize = charData[charGroup].length;
-          let char = Math.floor((Math.random() * groupArraySize) + 0);
-          console.log(charData[charGroup][char].charName);
-          console.log(charData[charGroup][char].charphoto);
-          console.log(charData[charGroup][char].shortName);
+          displayAlterEgoInfo(1, charData);
         }
         else if (seekerScore >= 39 && seekerScore <= 42) {
-          let charGroup = 2;
-          let groupArraySize = charData[charGroup].length;
-          let char = Math.floor((Math.random() * groupArraySize) + 0);
-          console.log(charData[charGroup][char].charName);
-          console.log(charData[charGroup][char].charphoto);
-          console.log(charData[charGroup][char].shortName);
+          displayAlterEgoInfo(2, charData);
         }
         else if (seekerScore >= 34 && seekerScore <= 38) {
-          let charGroup = 3;
-          let groupArraySize = charData[charGroup].length;
-          let char = Math.floor((Math.random() * groupArraySize) + 0);
-          console.log(charData[charGroup][char].charName);
-          console.log(charData[charGroup][char].charphoto);
-          console.log(charData[charGroup][char].shortName);
+          displayAlterEgoInfo(3, charData);
         }
         else if (seekerScore >= 29 && seekerScore <= 33) {
-          let charGroup = 4;
-          let groupArraySize = charData[charGroup].length;
-          let char = Math.floor((Math.random() * groupArraySize) + 0);
-          console.log(charData[charGroup][char].charName);
-          console.log(charData[charGroup][char].charphoto);
-          console.log(charData[charGroup][char].shortName);
+          displayAlterEgoInfo(4, charData);
         }
         else if (seekerScore >= 24 && seekerScore <= 28) {
-          let charGroup = 5;
-          let groupArraySize = charData[charGroup].length;
-          let char = Math.floor((Math.random() * groupArraySize) + 0);
-          console.log(charData[charGroup][char].charName);
-          console.log(charData[charGroup][char].charphoto);
-          console.log(charData[charGroup][char].shortName);
+          displayAlterEgoInfo(5, charData);
         }
         else if (seekerScore >= 19 && seekerScore <= 23) {
-          let charGroup = 6;
-          let groupArraySize = charData[charGroup].length;
-          let char = Math.floor((Math.random() * groupArraySize) + 0);
-          console.log(charData[charGroup][char].charName);
-          console.log(charData[charGroup][char].charphoto);
-          console.log(charData[charGroup][char].shortName);
+          displayAlterEgoInfo(6, charData);
         }
         else if (seekerScore >= 14 && seekerScore <= 18) {
-          let charGroup = 7;
-          let groupArraySize = charData[charGroup].length;
-          let char = Math.floor((Math.random() * groupArraySize) + 0);
-          console.log(charData[charGroup][char].charName);
-          console.log(charData[charGroup][char].charphoto);
-          console.log(charData[charGroup][char].shortName);
+          displayAlterEgoInfo(7, charData);
         }
         else if (seekerScore >= 11 && seekerScore <= 13) {
-          let charGroup = 8;
-          let groupArraySize = charData[charGroup].length;
-          let char = Math.floor((Math.random() * groupArraySize) + 0);
-          console.log(charData[charGroup][char].charName);
-          console.log(charData[charGroup][char].charphoto);
-          console.log(charData[charGroup][char].shortName);
+          displayAlterEgoInfo(8, charData);
         }
         else {
-          let charGroup = 9;
-          let groupArraySize = charData[charGroup].length;
-          let char = Math.floor((Math.random() * groupArraySize) + 0);
-          console.log(charData[charGroup][char].charName);
-          console.log(charData[charGroup][char].charphoto);
-          console.log(charData[charGroup][char].shortName);
+          displayAlterEgoInfo(9, charData);
         }
   
     })
   
   }
   
-  let displayAlterEgoInfo = (group, arraylength) => {
-
+  let displayAlterEgoInfo = (group, charData) => {
+    let charGroup = group;
+    let groupArraySize = charData[charGroup].length;
+    let char = Math.floor((Math.random() * groupArraySize) + 0);
+    let alterEgo = charData[charGroup][char] 
+    setUpHandleBars(alterEgo);
   }
 
-  let setUpHandleBars = () => {
+  let setUpHandleBars = (charData) => {
     
-    $.ajax({
-      url: "/api/potterchars",
-      method: "GET"
-    })
-    .then(function (charData) {
-    });
+    let source = $("#result-template").text();
+    let template = Handlebars.compile(source);
+    let html = template(charData);
+    $("#char-placement").html(html);
   }
 
   $(".find_alterego").on("click", function (event) {
       event.preventDefault();
       submitForm();
-      
-      
-
   })
-
-
-
-
 
 });

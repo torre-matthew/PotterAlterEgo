@@ -10,6 +10,16 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
       <link rel="stylesheet" type="text/css" href="../style/potterstyle.css">
+
+
+      <script id="result-template" type="text/x-handlebars-template">
+        <div id="charname"> 
+            <h3>{{charName}}</h3>
+          </div>
+          <div>
+            <img id="char-photo" src="{{charphoto}}" alt="">
+          </div>
+      </script>
     </head>
 
       <body>
@@ -17,15 +27,12 @@
                 
 
                 <!-- Modal Structure -->
-                <div id="modal1" class="modal">
-                  <div class="modal-content">
-                    <h4>Modal Header</h4>
-                    <p>A bunch of text</p>
-                  </div>
-                  <div class="modal-footer">
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-                  </div>
-                </div>
+          <div id="modal1" class="modal bottom-sheet">
+            <div class="modal-content">
+              <p>Potter-verse Alter ego for .....</p>
+              <div id="char-placement"></div>
+            </div>
+          </div>
 
               <div class="row">
                   <div class="col s12 m6">
