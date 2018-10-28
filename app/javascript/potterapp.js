@@ -4,6 +4,7 @@ let user = [];
 $(document).ready(function(){
     $('select').formSelect();
     $('.modal').modal();
+    $('.collapsible').collapsible();
   
 
   let submitForm = () => {

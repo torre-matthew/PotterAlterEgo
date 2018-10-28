@@ -8,3 +8,17 @@ img {
     margin-right: auto;
     width: 32%;
 }
+
+#image {
+    margin-bottom: 75px;
+}
+
+.select-wrapper + label {
+    position: absolute;
+    top: -26px;
+    font-size: 17px;
+}
+
+.input-field > label {
+    color: black;
+}
