@@ -1,0 +1,3 @@
+seekers = [ ];
+
+module.exports = seekers;

@@ -23,12 +23,16 @@
     </head>
 
       <body>
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="/home">Home</a></li>
+                <li><a href="https://www.pottermore.com/" target="_blank">Pottermore</a></li>
+                <li><a href="/api/potterchars" target="_blank">Potter Chararacter Api</a></li>
+            </ul>
           <nav>
               <div class="nav-wrapper">
                 <a href="#" class="brand-logo">Potter Alter-ego Survey</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                  <li><a href="/home">Home</a></li>
-                  <li><a href="/api/potterchars">Potter Chararacter Api</a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Menu<i class="material-icons right">arrow_drop_down</i></a></li>
                 </ul>
               </div>
             </nav>
@@ -61,7 +65,7 @@
               </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="image" type="text" class="validate" required>
+                <input id="image" type="text" class="validate">
                 <label for="Image">Image</label>
               </div>
             </div>

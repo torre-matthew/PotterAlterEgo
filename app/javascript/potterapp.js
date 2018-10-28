@@ -5,15 +5,16 @@ $(document).ready(function(){
     $('select').formSelect();
     $('.modal').modal();
     $('.collapsible').collapsible();
-  
+    $(".dropdown-trigger").dropdown();  
 
   let submitForm = () => {
     
 
   let seeker = {
-    firstname: $("#first_name").val().trim(),
-    lastname: $("#last_name").val().trim(),
-    scores: [ 
+    SeekerFirstName: $("#first_name").val().trim(),
+    SeekerLastName: $("#last_name").val().trim(),
+    SeekerPhoto: $("#image").val().trim(),
+    SeekerScores: [ 
     $("#q1").find(":selected").val(),
     $("#q2").find(":selected").val(),
     $("#q3").find(":selected").val(),
@@ -30,20 +31,22 @@ $(document).ready(function(){
 
   user.push(seeker);
   console.log(user);
+  postSeekerInfo(seeker);
 
-  let seekerScore = parseInt(user[0].scores[0]) +
-                    parseInt(user[0].scores[1]) +
-                    parseInt(user[0].scores[2]) +
-                    parseInt(user[0].scores[3]) +
-                    parseInt(user[0].scores[4]) +
-                    parseInt(user[0].scores[5]) +
-                    parseInt(user[0].scores[6]) +
-                    parseInt(user[0].scores[7]) +
-                    parseInt(user[0].scores[8]) +
-                    parseInt(user[0].scores[9]);
+  let seekerScore = parseInt(user[0].SeekerScores[0]) +
+                    parseInt(user[0].SeekerScores[1]) +
+                    parseInt(user[0].SeekerScores[2]) +
+                    parseInt(user[0].SeekerScores[3]) +
+                    parseInt(user[0].SeekerScores[4]) +
+                    parseInt(user[0].SeekerScores[5]) +
+                    parseInt(user[0].SeekerScores[6]) +
+                    parseInt(user[0].SeekerScores[7]) +
+                    parseInt(user[0].SeekerScores[8]) +
+                    parseInt(user[0].SeekerScores[9]);
 
   console.log(seekerScore);
   callPotterCharApi(seekerScore);
+
 
 }
 
@@ -90,6 +93,21 @@ $(document).ready(function(){
     })
   
   }
+
+  let postSeekerInfo = (seekerInfo) => {
+    
+    $.post("/api/seekers", seekerInfo,
+      function(data) {
+        if (data) {
+          console.log("Data successfully posted to API");
+        }
+        else {
+          console.log("There was an issue posting data to the api!!")
+        }
+
+      });
+
+  }
   
   let displayAlterEgoInfo = (group, charData) => {
     let charGroup = group;
@@ -115,9 +133,15 @@ $(document).ready(function(){
 
 
   $(".modal-close").on("click", function (event) {
-    $(".select-wrapper input.select-dropdown #first_name #last_name").val("");
+    $(".select-wrapper input.select-dropdown").val("");
     $("#first_name").val("");
     $("#last_name").val("");
     $("#image").val("");
 })
+
 });
+
+//To DO:
+  // DOn't allow submit until all req fields are filled out
+  // once submitted user should be able to do the survey again
+  // post user response to the server
