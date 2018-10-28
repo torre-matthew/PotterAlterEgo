@@ -1,3 +1,7 @@
+body {
+    background-color: #38302c;
+}
+
 #charname {
     text-align: center;
 }
@@ -20,21 +24,42 @@ img {
 }
 
 .input-field > label {
-    color: black;
+    color: #eec55d;
 }
 
 
 .select-wrapper input.select-dropdown {
-    height: 5rem;
-    margin: 20px 0 8px 0;
+    height: 4rem;
+    margin: 45px 0 8px 0;
+    border: 1px solid black;
 }
 
+nav {
+    color: #6d6158;
+    background-color: #eeb527;
+}
 
+nav ul a {
+    color: #6d6158; 
+}
+
+nav .brand-logo {
+    color: #6d6158;
+}
+
+.btn, .btn-large, .btn-small {
+    text-decoration: none;
+    color: #6d6158;
+    background-color: #eeb527;
+}
 
 @media screen and (max-width: 440px) {
 
 .select-wrapper input.select-dropdown {
-    height: 10rem;
+    height: 4rem;
+    margin: 65px 0 8px 0;
+    border: 1px solid black;
+    padding: 20px;
 }
 
 }
