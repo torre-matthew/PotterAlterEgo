@@ -110,6 +110,11 @@ $(document).ready(function(){
   $(".find_alterego").on("click", function (event) {
       event.preventDefault();
       submitForm();
+      // $(".select-wrapper input.select-dropdown").val("");
   })
 
+
+  $(".modal-close").on("click", function (event) {
+    $(".select-wrapper input.select-dropdown").val("");
+})
 });

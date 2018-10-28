@@ -1,9 +1,19 @@
 body {
-    background-color: #38302c;
+    background-color: #8ead52;
 }
 
 #charname {
     text-align: center;
+}
+
+.card {
+    background-color: #514d5c;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
 
 img {
@@ -14,7 +24,16 @@ img {
 }
 
 #image {
-    margin-bottom: 75px;
+    margin-bottom: 55px;
+    border-bottom: 1px solid black;
+}
+
+#last_name {
+    border-bottom: 1px solid black;
+}
+
+#first_name {
+    border-bottom: 1px solid black;
 }
 
 .select-wrapper + label {
@@ -24,7 +43,7 @@ img {
 }
 
 .input-field > label {
-    color: #eec55d;
+    color: #3f4f45;
 }
 
 
@@ -37,29 +56,36 @@ img {
 
 nav {
     color: #6d6158;
-    background-color: #eeb527;
+    background-color: #514d5c;
     margin-bottom: 35px;
 }
 
 nav ul a {
-    color: #6d6158; 
+    color: #ffff31; 
 }
 
 nav .brand-logo {
-    color: #6d6158;
+    color: #ffff31;
 }
 
-.btn, .btn-large, .btn-small {
+.btn, .btn-large {
     text-decoration: none;
-    color: #6d6158;
-    background-color: #eeb527;
+    color: #ffff31;
+    background-color: #514d5c;
     width: 100%;
 }
 
-.survey-questions {
-    margin-left: auto;
-    margin-right: auto;
+.dropdown-content li > a, .dropdown-content li > span {
+    font-size: 16px;
+    color: #3f4f45;
+}
+
+.row .col.s12 {
     width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    color: black;
 }
 
 @media screen and (max-width: 440px) {
