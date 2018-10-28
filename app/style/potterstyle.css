@@ -22,3 +22,19 @@ img {
 .input-field > label {
     color: black;
 }
+
+
+.select-wrapper input.select-dropdown {
+    height: 5rem;
+    margin: 20px 0 8px 0;
+}
+
+
+
+@media screen and (max-width: 440px) {
+
+.select-wrapper input.select-dropdown {
+    height: 10rem;
+}
+
+}
