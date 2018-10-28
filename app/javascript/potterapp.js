@@ -27,7 +27,6 @@ $(document).ready(function(){
     $("#q9").find(":selected").val(),
     $("#q10").find(":selected").val()
     ] 
-    
   }
 
   user.push(seeker);
@@ -87,10 +86,9 @@ $(document).ready(function(){
         else if (seekerScore >= 11 && seekerScore <= 13) {
           displayAlterEgoInfo(8, charData);
         }
-        else {
+        else if (seekerScore >= 10 && seekerScore <= 12) {
           displayAlterEgoInfo(9, charData);
         }
-  
     })
   
   }
@@ -126,12 +124,48 @@ $(document).ready(function(){
     $("#char-placement").html(html);
   }
 
-  $(".find_alterego").on("click", function (event) {
-      event.preventDefault();
-      submitForm();
-      // $(".select-wrapper input.select-dropdown").val("");
-  })
+  let submitButtonState = () => {
+    console.log($("#q1").val() != null);
+    console.log($("#q2").val() != null);
+    console.log($("#q3").val() != null);
+    console.log($("#q4").val() != null);
+    console.log($("#q5").val() != null);
+    console.log($("#q6").val() != null);
+    console.log($("#q7").val() != null);
+    console.log($("#q8").val() != null);
+    console.log($("#q9").val() != null);
+    console.log($("#q10").val() != null);
 
+
+    if (($("#q1").val() != null) && ($("#q2").val() != null) && ($("#q3").val() != null) && ($("#q4").val() != null) && ($("#q5").val() != null) && ($("#q6").val() != null) && ($("#q7").val() != null) && ($("#q8").val() != null) && ($("#q9").val() != null) && ($("#q10").val() != null)) {
+
+
+      $(".button-here").empty();
+
+      let button = $("<button>")
+                .addClass("btn waves-effect waves-light find_alterego modal-trigger")
+                .attr("href", "#modal1")
+                .attr("type", "submit")
+                .attr("name", "action")
+                .text("Find your Potter-verse Alter Ego");
+
+      $(".button-here").append(button);
+
+    }
+  }
+
+// ============================================= Event Handlers ======================================//
+
+  $("span").on("click", function (event) {
+    submitButtonState();
+})
+
+
+$("body").on("click", ".find_alterego", function(event){
+  event.preventDefault();
+  submitForm();
+
+});
 
   $(".modal-close").on("click", function (event) {
     $(".select-wrapper input.select-dropdown").val("");
@@ -141,6 +175,8 @@ $(document).ready(function(){
 })
 
 });
+
+
 
 //To DO:
   // DOn't allow submit until all req fields are filled out

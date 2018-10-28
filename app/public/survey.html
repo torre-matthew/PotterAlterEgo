@@ -36,11 +36,13 @@
             <ul id="dropdown1" class="dropdown-content">
                     <li><a href="/home">Home</a></li>
                     <li><a href="https://www.pottermore.com/" target="_blank">Pottermore</a></li>
+                    <li><a href="http://harrypotter.wikia.com/wiki/Main_Page" target="_blank">Potter Wikia</a></li>
                     <li><a href="/api/potterchars" target="_blank">Potter Chararacter Api</a></li>
             </ul>
             <ul id="mobile-demo" class="sidenav">
                     <li><a href="/home">Home</a></li>
                     <li><a href="https://www.pottermore.com/" target="_blank">Pottermore</a></li>
+                    <li><a href="http://harrypotter.wikia.com/wiki/Main_Page" target="_blank">Potter Wikia</a></li>
                     <li><a href="/api/potterchars" target="_blank">Potter Chararacter Api</a></li>
             </ul>
                 
@@ -50,6 +52,7 @@
             <div class="modal-content">
               <p>Potter-verse Alter Ego for .....</p>
               <div id="char-placement"></div>
+              <div><a href="#" target="_blank">Others with the same alter ego.</a></div>
               <a class="waves-effect waves-light btn-small modal-close">Close</a>
             </div>
           </div>
@@ -207,9 +210,28 @@
                         <label>You would consider a day spent helping others to be a great day.</label>
                     </div>
                 </div>
-                <button class="btn waves-effect waves-light find_alterego modal-trigger" href="#modal1" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
-                </button>
+                <div class="row">
+                    <div class="input-field col s12 l12">
+                        <select id="q11" required>
+                            <option value="" disabled selected></option>
+                            <option value="1">Haven't Read them</option>
+                            <option value="1">Sorcerer's Stone</option>
+                            <option value="1">Chamber of Secrets</option>
+                            <option value="1">Prisoner of Azkaban</option>
+                            <option value="1">Goblet of Fire</option>
+                            <option value="1">Order of the Pheoniz</option>
+                            <option value="1">Half-blood Prince</option>
+                            <option value="1">Deathly Hallows</option>
+                            <option value="1">No Favorite</option>
+                        </select>
+                        <label>By the way, what's your favorite of the Potter Books?</label>
+                    </div>
+                </div>
+                <div class="button-here">
+                    <button class="btn waves-effect waves-light find_alterego modal-trigger disabled" href="#modal1" type="submit" name="action">
+                        Please answer all questions for best results!
+                    </button>
+                </div>
             </form>
       </section>
             
