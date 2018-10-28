@@ -6,6 +6,7 @@ $(document).ready(function(){
     $('.modal').modal();
     $('.collapsible').collapsible();
     $(".dropdown-trigger").dropdown();  
+    $('.sidenav').sidenav();
 
   let submitForm = () => {
     
