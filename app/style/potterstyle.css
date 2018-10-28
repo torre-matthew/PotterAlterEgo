@@ -97,4 +97,21 @@ nav .brand-logo {
     padding: 10px;
 }
 
+h3 {
+    font-size: 20px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
+.modal .modal-close {
+    cursor: pointer;
+    margin-top: 12px;
+    align-content: center;
+}
+
 }
