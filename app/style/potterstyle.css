@@ -32,11 +32,13 @@ img {
     height: 4rem;
     margin: 45px 0 8px 0;
     border: 1px solid black;
+    padding: 10px;
 }
 
 nav {
     color: #6d6158;
     background-color: #eeb527;
+    margin-bottom: 35px;
 }
 
 nav ul a {
@@ -51,6 +53,13 @@ nav .brand-logo {
     text-decoration: none;
     color: #6d6158;
     background-color: #eeb527;
+    width: 100%;
+}
+
+.survey-questions {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 @media screen and (max-width: 440px) {
@@ -59,7 +68,7 @@ nav .brand-logo {
     height: 4rem;
     margin: 65px 0 8px 0;
     border: 1px solid black;
-    padding: 20px;
+    padding: 10px;
 }
 
 }
