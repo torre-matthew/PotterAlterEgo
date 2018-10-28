@@ -114,4 +114,9 @@ img {
     align-content: center;
 }
 
+nav .brand-logo {
+    color: #ffff31;
+    font-size: 18px;
+}
+
 }

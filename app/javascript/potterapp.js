@@ -115,6 +115,9 @@ $(document).ready(function(){
 
 
   $(".modal-close").on("click", function (event) {
-    $(".select-wrapper input.select-dropdown").val("");
+    $(".select-wrapper input.select-dropdown #first_name #last_name").val("");
+    $("#first_name").val("");
+    $("#last_name").val("");
+    $("#image").val("");
 })
 });
