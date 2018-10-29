@@ -165,6 +165,7 @@ $("body").on("click", ".find_alterego", function(event){
     $("#first_name").val("");
     $("#last_name").val("");
     $("#image").val("");
+    location.reload();
 })
 
 });
