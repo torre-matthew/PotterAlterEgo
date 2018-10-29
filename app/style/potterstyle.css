@@ -16,11 +16,18 @@ body {
     transform: translate(-50%, -50%)
 }
 
+#personalization {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 32%;
+    margin-bottom: 10px;
+    width: 55%;
 }
 
 #image {
@@ -97,6 +104,17 @@ p {
     font-weight: bold;
 }
 
+.modal-close {
+    float: right;
+    background-color: #514d5c;
+    color: #ffff31;
+}
+
+#other-seekers {
+    text-align: center;
+    font-size: 15px,
+}
+
 @media screen and (max-width: 440px) {
 
 .select-wrapper input.select-dropdown {
@@ -118,6 +136,7 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10px;
     width: 75%;
 }
 
@@ -130,6 +149,13 @@ img {
 nav .brand-logo {
     color: #ffff31;
     font-size: 16px;
+}
+
+.modal-close {
+    float: right;
+    background-color: #514d5c;
+    color: #ffff31;
+    margin-bottom: 10px;
 }
 
 }

@@ -15,6 +15,7 @@ $(document).ready(function(){
     SeekerFirstName: $("#first_name").val().trim(),
     SeekerLastName: $("#last_name").val().trim(),
     SeekerPhoto: $("#image").val().trim(),
+    FavBook: $("#q1").find(":selected").val(), 
     SeekerScores: [ 
     $("#q1").find(":selected").val(),
     $("#q2").find(":selected").val(),
@@ -28,6 +29,8 @@ $(document).ready(function(){
     $("#q10").find(":selected").val()
     ] 
   }
+
+    let seekerDisplayName = "Potter-verse Alter Ego for " + seeker.SeekerFirstName + " " + seeker.SeekerLastName;
 
   user.push(seeker);
   console.log(user);
@@ -46,8 +49,7 @@ $(document).ready(function(){
 
   console.log(seekerScore);
   callPotterCharApi(seekerScore);
-
-
+  $("#personalization").text(seekerDisplayName);
 }
 
   let callPotterCharApi = (seekerScore) => {
