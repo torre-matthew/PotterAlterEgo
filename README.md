@@ -1,4 +1,4 @@
-# PotterAlterEgo
+# Potter-verse Alter Ego Finder
 
 Welcome to the Potter-verse Alter Ego Finder. 
 
