@@ -107,8 +107,11 @@ $(document).ready(function(){
         }
 
       });
-
   }
+  
+  let getSeekerInfo = () => {}
+
+  
   
   let displayAlterEgoInfo = (group, charData) => {
     let charGroup = group;
@@ -127,18 +130,6 @@ $(document).ready(function(){
   }
 
   let submitButtonState = () => {
-    console.log($("#q1").val() != null);
-    console.log($("#q2").val() != null);
-    console.log($("#q3").val() != null);
-    console.log($("#q4").val() != null);
-    console.log($("#q5").val() != null);
-    console.log($("#q6").val() != null);
-    console.log($("#q7").val() != null);
-    console.log($("#q8").val() != null);
-    console.log($("#q9").val() != null);
-    console.log($("#q10").val() != null);
-
-
     if (($("#q1").val() != null) && ($("#q2").val() != null) && ($("#q3").val() != null) && ($("#q4").val() != null) && ($("#q5").val() != null) && ($("#q6").val() != null) && ($("#q7").val() != null) && ($("#q8").val() != null) && ($("#q9").val() != null) && ($("#q10").val() != null)) {
 
 

@@ -90,6 +90,7 @@ nav .brand-logo {
 .row .col.s12 {
     width: 100%;
     margin-left: auto;
+    margin-right: auto;
     left: auto;
     right: auto;
     color: black;
